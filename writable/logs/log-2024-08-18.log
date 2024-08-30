@@ -1,0 +1,909 @@
+INFO - 2024-08-18 06:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:07:48 --> CSRF token verified.
+INFO - 2024-08-18 06:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:08:37 --> CSRF token verified.
+ERROR - 2024-08-18 06:08:37 --> mysqli_sql_exception: Duplicate entry '0' for key 'slider.PRIMARY' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Code Igniter\project_1\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Code Igniter\project_1\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Code Igniter\project_1\app\Controllers\Slider.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#11 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#16 {main}
+CRITICAL - 2024-08-18 06:08:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'slider.PRIMARY'
+[Method: POST, Route: slider-create-material]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 06:08:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'slider.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Hello World , for the third time\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Hello World , for the third time\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 06:08:37 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'slider.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Hello World , for the third time\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Hello World , for the third time\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Hello World , for the third time\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 06:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:09:42 --> CSRF token verified.
+INFO - 2024-08-18 06:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:09:58 --> CSRF token verified.
+ERROR - 2024-08-18 06:09:58 --> mysqli_sql_exception: Duplicate entry '0' for key 'slider.PRIMARY' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `sl...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sl...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sl...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sl...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Code Igniter\project_1\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Code Igniter\project_1\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Code Igniter\project_1\app\Controllers\Slider.php(62): CodeIgniter\BaseModel->save(Array)
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#11 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#16 {main}
+CRITICAL - 2024-08-18 06:09:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'slider.PRIMARY'
+[Method: POST, Route: slider-create-material]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 06:09:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'slider.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Second Title\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Second Title\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 06:09:58 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'slider.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Second Title\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Second Title\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `slider` (`Slider_Title`) VALUES (\'Second Title\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `slider` (`Slider_Title`) VALUES (:Slider_Title:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Slider.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->createSlider()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 06:12:50 --> CSRF token verified.
+INFO - 2024-08-18 06:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:13:11 --> CSRF token verified.
+INFO - 2024-08-18 06:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:13:36 --> CSRF token verified.
+INFO - 2024-08-18 06:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:19:27 --> CSRF token verified.
+INFO - 2024-08-18 06:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:19:36 --> CSRF token verified.
+INFO - 2024-08-18 06:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 06:46:07 --> CSRF token verified.
+INFO - 2024-08-18 06:57:36 --> CSRF token verified.
+CRITICAL - 2024-08-18 06:57:36 --> ErrorException: Undefined variable $post
+[Method: POST, Route: update-slider-data/3]
+in APPPATH\Controllers\Slider.php on line 49.
+ 1 APPPATH\Controllers\Slider.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'C:\\Code Igniter\\project_1\\app\\Controllers\\Slider.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:01:09 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:01:09 --> Error: Call to undefined method App\Controllers\Slider::new()
+[Method: POST, Route: update-slider-data/3]
+in APPPATH\Controllers\Slider.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:02:00 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:02:00 --> Error: Call to undefined method App\Controllers\Slider::new()
+[Method: POST, Route: update-slider-data/3]
+in APPPATH\Controllers\Slider.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:04:11 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:04:11 --> Error: Call to a member function getValidated() on null
+[Method: POST, Route: update-slider-data/3]
+in APPPATH\Controllers\Slider.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:04:56 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:04:56 --> InvalidArgumentException: whereIn() expects $values to be of type array or closure
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 943.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(829): CodeIgniter\Database\BaseBuilder->_whereIn('id', '3', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(919): CodeIgniter\Database\BaseBuilder->whereIn('id', '3')
+ 3 APPPATH\Controllers\Slider.php(65): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:06:19 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:06:19 --> Error: Call to undefined method App\Controllers\Slider::new()
+[Method: POST, Route: update-slider-data/3]
+in APPPATH\Controllers\Slider.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:11:36 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:11:36 --> InvalidArgumentException: whereIn() expects $values to be of type array or closure
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 943.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(829): CodeIgniter\Database\BaseBuilder->_whereIn('id', '3', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(919): CodeIgniter\Database\BaseBuilder->whereIn('id', '3')
+ 3 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-18 07:11:39 --> Error: Call to undefined function validation_list_errors()
+[Method: GET, Route: edit-slider/3]
+in APPPATH\Views\pages\backoffice-edit-slider-form.php on line 16.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-edit-slider-form', [], true)
+ 4 APPPATH\Controllers\Slider.php(42): view('pages/backoffice-edit-slider-form', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->editSlider('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-18 07:11:46 --> Error: Call to undefined function validation_list_errors()
+[Method: GET, Route: edit-slider/3]
+in APPPATH\Views\pages\backoffice-edit-slider-form.php on line 16.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-edit-slider-form', [], true)
+ 4 APPPATH\Controllers\Slider.php(42): view('pages/backoffice-edit-slider-form', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->editSlider('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:12:43 --> CSRF token verified.
+CRITICAL - 2024-08-18 07:12:43 --> InvalidArgumentException: whereIn() expects $values to be of type array or closure
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 943.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(829): CodeIgniter\Database\BaseBuilder->_whereIn('id', '3', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(919): CodeIgniter\Database\BaseBuilder->whereIn('id', '3')
+ 3 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:13:31 --> CSRF token verified.
+ERROR - 2024-08-18 07:13:31 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('3', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:13:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:13:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title updated\'
+WHERE `slider`.`id` IN (\'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title updated\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:13:31 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title updated\'
+WHERE `slider`.`id` IN (\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title updated\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title updated\'
+WHERE `slider`.`id` IN (\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:13:48 --> CSRF token verified.
+ERROR - 2024-08-18 07:13:48 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('3', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:13:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:13:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actully\'
+WHERE `slider`.`id` IN (\'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actully\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:13:48 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title Actully\'
+WHERE `slider`.`id` IN (\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actully\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actully\'
+WHERE `slider`.`id` IN (\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:14:19 --> CSRF token verified.
+ERROR - 2024-08-18 07:14:19 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('3', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:14:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:14:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:14:19 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('3', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('3')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:18:18 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: edit-slider/3]
+in APPPATH\Views\pages\backoffice-edit-slider-form.php on line 17.
+ 1 APPPATH\Views\pages\backoffice-edit-slider-form.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'C:\\Code Igniter\\project_1\\app\\Views\\pages\\backoffice-edit-slider-form.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Code Igniter\\project_1\\app\\Views\\pages\\backoffice-edit-slider-form.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-edit-slider-form', [], true)
+ 5 APPPATH\Controllers\Slider.php(42): view('pages/backoffice-edit-slider-form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->editSlider('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 07:18:35 --> CSRF token verified.
+INFO - 2024-08-18 07:18:44 --> CSRF token verified.
+ERROR - 2024-08-18 07:18:44 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('4', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:18:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:18:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:18:44 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:20:49 --> CSRF token verified.
+ERROR - 2024-08-18 07:20:49 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('4', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:20:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:20:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:20:49 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:20:54 --> CSRF token verified.
+ERROR - 2024-08-18 07:20:55 --> mysqli_sql_exception: Unknown column 'slider.id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('4', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:20:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+[Method: POST, Route: update-slider-data/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:20:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:20:55 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title Actually\'
+WHERE `slider`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`id` IN :slider.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:23:41 --> CSRF token verified.
+ERROR - 2024-08-18 07:23:41 --> mysqli_sql_exception: Unknown column 'slider.Slider-Id' in 'where clause' in C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Code Igniter\project_1\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider`...', 0)
+#1 C:\Code Igniter\project_1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider`...')
+#2 C:\Code Igniter\project_1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider`...')
+#3 C:\Code Igniter\project_1\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider`...', Array, false)
+#4 C:\Code Igniter\project_1\system\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Code Igniter\project_1\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Code Igniter\project_1\system\Model.php(854): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Code Igniter\project_1\app\Controllers\Slider.php(52): CodeIgniter\Model->update('4', Array)
+#8 C:\Code Igniter\project_1\system\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+#9 C:\Code Igniter\project_1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+#10 C:\Code Igniter\project_1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Code Igniter\project_1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Code Igniter\project_1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Code Igniter\project_1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Code Igniter\project_1\system\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter...')
+#15 {main}
+CRITICAL - 2024-08-18 07:23:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.Slider-Id' in 'where clause'
+[Method: POST, Route: update-slider-data/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`Slider-Id` IN :slider.Slider-Id:', [...], false)
+ 2 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:23:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'slider.Slider-Id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title\'
+WHERE `slider`.`Slider-Id` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title\'
+WHERE `slider`.`Slider-Id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`Slider-Id` IN :slider.Slider-Id:', [...], false)
+ 4 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 07:23:41 --> [Caused by] mysqli_sql_exception: Unknown column 'slider.Slider-Id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `slider` SET `Slider_Title` = \'Second Title\'
+WHERE `slider`.`Slider-Id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `slider` SET `Slider_Title` = \'Second Title\'
+WHERE `slider`.`Slider-Id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `slider` SET `Slider_Title` = \'Second Title\'
+WHERE `slider`.`Slider-Id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `slider` SET `Slider_Title` = :Slider_Title:
+WHERE `slider`.`Slider-Id` IN :slider.Slider-Id:', [...], false)
+ 5 SYSTEMPATH\Model.php(450): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Slider.php(52): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Slider->updateSlider('4')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Slider))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 07:24:05 --> CSRF token verified.
+INFO - 2024-08-18 07:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 07:29:24 --> CSRF token verified.
+INFO - 2024-08-18 07:29:50 --> CSRF token verified.
+INFO - 2024-08-18 10:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-18 10:32:22 --> Error: Call to undefined function validation_list_errors()
+[Method: GET, Route: backoffice-about-us]
+in APPPATH\Views\pages\backoffice-about-us.php on line 111.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-about-us', [], true)
+ 4 APPPATH\Controllers\AboutUs.php(24): view('pages/backoffice-about-us')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->showbackofficeAboutUs()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-18 10:48:25 --> Error: Call to undefined function set_value()
+[Method: GET, Route: backoffice-about-us]
+in APPPATH\Views\pages\backoffice-about-us.php on line 151.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-about-us', [], true)
+ 4 APPPATH\Controllers\AboutUs.php(24): view('pages/backoffice-about-us')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->showbackofficeAboutUs()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 10:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-18 10:50:13 --> Error: Call to undefined function validation_list_errors()
+[Method: GET, Route: backoffice-about-us]
+in APPPATH\Views\pages\backoffice-about-us.php on line 110.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-about-us', [], true)
+ 4 APPPATH\Controllers\AboutUs.php(24): view('pages/backoffice-about-us')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->showbackofficeAboutUs()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 10:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 10:58:45 --> CSRF token verified.
+CRITICAL - 2024-08-18 10:58:45 --> Error: Call to undefined method App\Controllers\AboutUs::new()
+[Method: POST, Route: backoffice-create-article]
+in APPPATH\Controllers\AboutUs.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->createArticle()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-18 11:00:25 --> CSRF token verified.
+INFO - 2024-08-18 11:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 11:00:52 --> CSRF token verified.
+INFO - 2024-08-18 11:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 11:03:05 --> CSRF token verified.
+INFO - 2024-08-18 11:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 11:10:06 --> CSRF token verified.
+INFO - 2024-08-18 11:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-18 11:12:10 --> CSRF token verified.
+INFO - 2024-08-18 11:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

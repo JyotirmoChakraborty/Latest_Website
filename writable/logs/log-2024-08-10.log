@@ -1,0 +1,36 @@
+CRITICAL - 2024-08-10 20:58:22 --> ErrorException: Undefined variable $route
+[Method: GET, Route: testimonial]
+in APPPATH\Config\Routes.php on line 37.
+ 1 APPPATH\Config\Routes.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\Code Igniter\\project_1\\app\\Config\\Routes.php', 37)
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-10 20:58:30 --> ErrorException: Undefined variable $route
+[Method: GET, Route: testimonial]
+in APPPATH\Config\Routes.php on line 37.
+ 1 APPPATH\Config\Routes.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\Code Igniter\\project_1\\app\\Config\\Routes.php', 37)
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-10 20:59:09 --> ErrorException: Undefined variable $route
+[Method: GET, Route: category]
+in APPPATH\Config\Routes.php on line 37.
+ 1 APPPATH\Config\Routes.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', 'C:\\Code Igniter\\project_1\\app\\Config\\Routes.php', 37)
+ 2 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')

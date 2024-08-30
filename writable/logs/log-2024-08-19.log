@@ -1,0 +1,141 @@
+INFO - 2024-08-19 03:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 03:25:26 --> ErrorException: Undefined variable $slider
+[Method: GET, Route: backoffice-about-us]
+in APPPATH\Views\pages\backoffice-about-us.php on line 36.
+ 1 APPPATH\Views\pages\backoffice-about-us.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $slider', 'C:\\Code Igniter\\project_1\\app\\Views\\pages\\backoffice-about-us.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Code Igniter\\project_1\\app\\Views\\pages\\backoffice-about-us.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-about-us', [], true)
+ 5 APPPATH\Controllers\AboutUs.php(29): view('pages/backoffice-about-us')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->showbackofficeAboutUs()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-19 15:14:43 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: CLI, Route: serve]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2024-08-19 15:15:37 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: CLI, Route: serve]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2024-08-19 15:16:00 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: CLI, Route: serve]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+INFO - 2024-08-19 15:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 15:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 15:49:35 --> ErrorException: Undefined variable $filename
+[Method: GET, Route: backoffice-contact]
+in APPPATH\Controllers\CommonController.php on line 14.
+ 1 APPPATH\Controllers\CommonController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filename', 'C:\\Code Igniter\\project_1\\app\\Controllers\\CommonController.php', 14)
+ 2 APPPATH\Controllers\Contact.php(23): App\controllers\CommonController->CheckFileExists('Views/pages/', 'backoffice-contact')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->showbackofficeContact()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-19 15:49:41 --> ErrorException: Undefined variable $filename
+[Method: GET, Route: backoffice-contact]
+in APPPATH\Controllers\CommonController.php on line 14.
+ 1 APPPATH\Controllers\CommonController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filename', 'C:\\Code Igniter\\project_1\\app\\Controllers\\CommonController.php', 14)
+ 2 APPPATH\Controllers\Contact.php(23): App\controllers\CommonController->CheckFileExists('Views/pages/', 'backoffice-contact')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->showbackofficeContact()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-19 15:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 15:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 15:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 15:53:07 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: GET, Route: create-slider]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-19 15:53:10 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: GET, Route: backoffice-about-us]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+CRITICAL - 2024-08-19 15:53:12 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+[Method: GET, Route: backoffice-contact]
+in SYSTEMPATH\Router\RouteCollection.php on line 1592.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1456): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('delete-article/(:segment)', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1053): CodeIgniter\Router\RouteCollection->create('GET', 'delete-article/(:segment)', [...], null)
+ 3 APPPATH\Config\Routes.php(60): CodeIgniter\Router\RouteCollection->get('/delete-article/(:segment)', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(340): require('C:\\Code Igniter\\project_1\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-19 15:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 16:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 16:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 16:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 16:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 16:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 16:08:32 --> Error: Call to undefined function validation_list_errors()
+[Method: GET, Route: backoffice-new-category]
+in APPPATH\Views\pages\backoffice-new-catagory.php on line 114.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/backoffice-new-catagory', [], true)
+ 4 APPPATH\Controllers\Catagory.php(34): view('pages/backoffice-new-catagory')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Catagory->createNewCatagory()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catagory))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Code Igniter\\project_1\\public\\index.php')
+INFO - 2024-08-19 16:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
